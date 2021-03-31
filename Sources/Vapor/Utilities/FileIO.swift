@@ -190,7 +190,7 @@ public struct FileIO {
                     stream.write(.end, promise: nil)
                 }
             }
-        }, count: byteCount)
+        }, count: byteCount, byteBufferAllocator: request.byteBufferAllocator)
         
         return response
     }
